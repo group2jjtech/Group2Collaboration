@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >-
+  This CloudFormation template creates a VPC, a public subnet, a private subnet, and an IGW
+Parameters:
+  VPCCidr:
+    Description: 'CidrBlock for the VPC'
+    Type: String
+    Default: 10.0.0.0/16
+Resources:
+  JJTechVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: !Ref VPCCidr
+      Tags:
+        - Key: Name
+          Value: JJTechVPC
+
+Outputs:
+  VpcId:
+    Description: "ID of the created VPC"
+    Value: !Ref JJTechVPC
