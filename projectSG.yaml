@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: This description is to create project10SG
+Resources:
+  MySecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: "Security group for my application"
+      SecurityGroupIngress:
+        - IpProtocol: "tcp"
+          FromPort: "80"
