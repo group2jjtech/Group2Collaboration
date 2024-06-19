@@ -19,3 +19,4 @@ Outputs:
   VpcId:
     Description: "ID of the created VPC"
     Value: !Ref JJTechVPC
+    
